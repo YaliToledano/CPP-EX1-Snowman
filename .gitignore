@@ -1,2 +1,6 @@
 *.vscode
 snowman
+*.o
+*.out
+test
+demo
