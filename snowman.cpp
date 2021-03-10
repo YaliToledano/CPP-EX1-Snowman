@@ -1,15 +1,21 @@
 #include "snowman.hpp"
 
-Snowman::Snowman(int h, int n,int l, int r,int x, int y,int t, int b){ 
-	this->H = h;
-	this->N = n;
-  this->L = l;
-	this->R = r;
-  this->X = x;
-	this->Y = y;
-  this->T = t;
-	this->B = b;
-}
-string Snowman::to_string() {
-	return "snowman";
+/*Snowman::Snowman(int a){ 
+	this->H = a;
+	this->N = a;
+  this->L = a;
+	this->R = a;
+  this->X = a;
+	this->Y = a;
+  this->T = a;
+	this->B = a;
+}*/
+
+string SnowmanMaker::Snowman(int s)
+{
+  if (s < 0)
+  { //just to compile
+    return "Exerption not valid";
+  }
+  return "BigcHUNGUS";
 }

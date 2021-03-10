@@ -6,13 +6,10 @@ CXXFLAGS=-std=c++2a -Werror
 HEADERS=snowman.hpp
 OBJECTS=snowman.o
 
-run: demo
-	./$^
-
 demo: Demo.o $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $^ -o demo
 
-test: TestCounter.o Test.o $(OBJECTS)
+test: Test.o $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $^ -o test
 
 tidy:
@@ -20,9 +17,6 @@ tidy:
 
 %.o: %.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
-
-Test2.cpp:
-	curl https://raw.githubusercontent.com/cpp-exercises/snowman-a/master/TestExample.cpp > Test2.cpp
 
 clean:
 	rm -f *.o demo test

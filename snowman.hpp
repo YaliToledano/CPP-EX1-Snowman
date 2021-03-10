@@ -3,9 +3,12 @@
 #include <iostream>
 using namespace std;
 
-class Snowman
+class SnowmanMaker
 {
-private: // Not required. All is private by default.
+private: 
+// At the start I thought to solve this with a Snowman object but probably a simple static function 
+//will do but im leaving those variables here just in case. its took a lot of time to write them!
+
   int H; //stands for head
   int N; //stands for nose/mouse
   int L; //stands for left eye
@@ -16,8 +19,9 @@ private: // Not required. All is private by default.
   int B; //stands for base
 
 public:
-  // inline:
-  int getH() { return H; }
+  
+  //not needed
+  /*int getH() { return H; }
   int getN() { return N; }
   int getL() { return L; }
   int getR() { return R; }
@@ -26,7 +30,6 @@ public:
   int getT() { return T; }
   int getB() { return B; }
 
-  // CPP file:
   void setH(int);
   void setN(int);
   void setL(int);
@@ -35,13 +38,14 @@ public:
   void setY(int);
   void setT(int);
   void setB(int);
-
-  string to_string();
+  */
+ static string Snowman(int);
 
   // // Constructors:
-  Snowman()
-  {
+  /*Snowman()
+  {>
     H = N = L = R = X = Y = T = B = 1;
   }
-  Snowman(int, int, int, int, int, int, int, int);
+  Snowman(int);*/
+  
 };
