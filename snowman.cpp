@@ -1,21 +1,14 @@
 #include "snowman.hpp"
+#include <string>
+#include <stdexcept>
+using namespace std;
 
-/*Snowman::Snowman(int a){ 
-	this->H = a;
-	this->N = a;
-  this->L = a;
-	this->R = a;
-  this->X = a;
-	this->Y = a;
-  this->T = a;
-	this->B = a;
-}*/
 
-string SnowmanMaker::Snowman(int s)
+string ariel::snowman(int s)
 {
   if (s < 0)
   { //just to compile
     return "Exerption not valid";
   }
-  return "BigcHUNGUS";
+  return "BigcHUNGUS-";
 }
