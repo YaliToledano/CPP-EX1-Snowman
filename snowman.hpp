@@ -5,11 +5,9 @@
 #include <stdexcept>
 using namespace std;
 
-class ariel
+namespace ariel
 {
 
-public:
-  
-  static string snowman(int);
+  string snowman(int);
 
 };
