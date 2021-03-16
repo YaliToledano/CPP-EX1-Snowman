@@ -8,7 +8,7 @@ TEST_CASE("lower-case snowman code") {
     CHECK(ariel::snowman(11111111) == string("\n _===_ \n (.,.) \n<( : )>\n ( : ) "));
 }
 TEST_CASE("Good snowman code") {
-    CHECK(ariel::snowman(12341234) == string("\n _===_ \n (O.-) \n<(> <)/\n (   ) "));
+    CHECK(ariel::snowman(12341234) == string("\n _===_ \n (O.-)/\n<(> <) \n (   ) "));
 }
 TEST_CASE("Good snowman code") {
     CHECK(ariel::snowman(42424242) == string("\n  ___  \n (_*_) \n (-.o)/\n (   ) \n (\" \") "));
@@ -33,16 +33,16 @@ TEST_CASE("Good snowman code") {
     CHECK(ariel::snowman(21113343) == string("\n  ___  \n ..... \n (.,.) \n/(   )\\\n (___) "));
 }
 TEST_CASE("Good snowman code") {
-    CHECK(ariel::snowman(33243214) == string("\n   _   \n  /_\\  \n (o_-) \n/( : )/\n (   ) "));
+    CHECK(ariel::snowman(33243214) == string("\n   _   \n  /_\\  \n (o_-)/\n/( : ) \n (   ) "));
 }
 TEST_CASE("Good snowman code") {
-    CHECK(ariel::snowman(14312422) == string("\n _===_ \n (O .) \n\\(] [) \n (\" \") "));
+    CHECK(ariel::snowman(14312422) == string("\n _===_ \n\\(O .) \n (] [) \n (\" \") "));
 }
 TEST_CASE("Good snowman code") {
     CHECK(ariel::snowman(13333333) == string("\n _===_ \n (O_O) \n/(> <)\\\n (___) "));
 }
 TEST_CASE("Good snowman code") {
-    CHECK(ariel::snowman(42342241) == string("\n  ___  \n (_*_) \n (O.-) \n\\(   )/\n ( : ) "));
+    CHECK(ariel::snowman(42342241) == string("\n  ___  \n (_*_) \n\\(O.-)/\n (   ) \n ( : ) "));
 }
 TEST_CASE("start-illigal number bad snowman code") {
     CHECK(ariel::snowman(51114411) == string("Syntax Error - Non valid digit/s, all digits must be between 1-4"));
@@ -113,29 +113,29 @@ TEST_CASE("Good snowman code") {
     CHECK(ariel::snowman(42342241) == string("\n  ___  \n (_*_) \n (O.-) \n\\(   )/\n ( : ) "));
 }
 TEST_CASE("start-illigal number bad snowman code") {
-    CHECK(ariel::snowman(51114411) == string("Syntax Error - Non valid digit/s, all digits must be between 1-4"));
+    CHECK_THROWS(ariel::snowman(51114411));
 }
 TEST_CASE("end-illigal number bad snowman code") {
-    CHECK(ariel::snowman(21334417) == string("Syntax Error - Non valid digit/s, all digits must be between 1-4"));
+    CHECK_THROWS(ariel::snowman(21334417));
 }
 TEST_CASE("middle-illigal number bad snowman code") {
-    CHECK(ariel::snowman(22229411) == string("Syntax Error - Non valid digit/s, all digits must be between 1-4"));
+    CHECK_THROWS(ariel::snowman(22229411));
 }
 TEST_CASE("9 digits bad snowman code") {
-    CHECK(ariel::snowman(131114411) == string("Syntax Error - Must be Exacly 8-digits long"));
+    CHECK_THROWS(ariel::snowman(131114411));
 }
 TEST_CASE("7 digits bad snowman code") {
-    CHECK(ariel::snowman(1121211) == string("Syntax Error - Must be Exacly 8-digits long"));
+    CHECK_THROWS(ariel::snowman(1121211));
 }
 TEST_CASE("Good snowman code") {
-    CHECK(ariel::snowman(-134124123) == string("Syntax Error - int cannot be negative"));
+    CHECK_THROWS(ariel::snowman(-134124123));
 }
 TEST_CASE("zero case bad snowman code") {
-    CHECK(ariel::snowman(0) == string("Syntax Error - Must be Exacly 8-digits long"));
+    CHECK_THROWS(ariel::snowman(0));
 }
 TEST_CASE("zero-start bad snowman code") {
-    CHECK(ariel::snowman(01224313) == string("Syntax Error - Must be Exacly 8-digits long"));
+    CHECK_THROWS(ariel::snowman(01224313));
 }
 TEST_CASE("two zero bad snowman code") {
-    CHECK(ariel::snowman(00114411) == string("Syntax Error - Must be Exacly 8-digits long"));
+    CHECK_THROWS(ariel::snowman(00114411));
 }

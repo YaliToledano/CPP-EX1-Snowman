@@ -282,6 +282,6 @@ string ariel::snowman(int snow_code)
     face += " ";
   }
 
-  return "\n" + h + "\n" + face + "\n" + x + t + y + "\n " + b;
+  return "\n" + h + "\n" + face + "\n" + x + t + y + "\n" + b;
   //return "\n" + h + face + x + t + y + b;
 }
